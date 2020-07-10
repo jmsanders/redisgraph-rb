@@ -27,15 +27,15 @@ class RedisGraph
     end
 
     def labels
-      @labels ||= @labels_proc.call
+      @labels = @labels_proc.call
     end
 
     def property_keys
-      @property_keys ||= @property_keys_proc.call
+      @property_keys = @property_keys_proc.call
     end
 
     def relationship_types
-      @relationship_types ||= @relationship_types_proc.call
+      @relationship_types = @relationship_types_proc.call
     end
 
     def call_procedure(procedure)
